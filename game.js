@@ -46,7 +46,6 @@ const textNodes = [
         options: [
             {
                 text: 'Option 1',
-                setState: { blueGoo: true },
                 nextText: 2
             },
             {
@@ -69,22 +68,18 @@ const textNodes = [
         options: [
             {
                 text: 'Option 1',
-                setState: { success: success += 0, cost: cost += 0, environment: environment += 0 },
                 nextText: 3
             },
             {
                 text: 'Option 2',
-                setState: { success: success += 0, cost: cost += 0, environment: environment += 0 },
                 nextText: 3
             },
             {
                 text: 'Option 3',
-                setState: { success: success += 0, cost: cost += 0, environment: environment += 0 },
                 nextText: 3
             },
             {
                 text: 'Option 4',
-                setState: { success: success += 0, cost: cost += 0, environment: environment += 0 },
                 nextText: 3
             }
         ]
@@ -95,22 +90,18 @@ const textNodes = [
         options: [
             {
                 text: 'Option 1',
-                setState: { success: success += 0, cost: cost += 0, environment: environment += 0 },
                 nextText: 4
             },
             {
                 text: 'Option 2',
-                setState: { success: success += 0, cost: cost += 0, environment: environment += 0 },
                 nextText: 4
             },
             {
                 text: 'Option 3',
-                setState: { success: success += 0, cost: cost += 0, environment: environment += 0 },
                 nextText: 4
             },
             {
                 text: 'Option 4',
-                setState: { success: success += 0, cost: cost += 0, environment: environment += 0 },
                 nextText: 4
             }
         ]
@@ -121,22 +112,18 @@ const textNodes = [
         options: [
             {
                 text: 'Option 1',
-                setState: { success: success += 0, cost: cost += 0, environment: environment += 0 },
                 nextText: 5
             },
             {
                 text: 'Option 2',
-                setState: { success: success += 0, cost: cost += 0, environment: environment += 0 },
                 nextText: 5
             },
             {
                 text: 'Option 3',
-                setState: { success: success += 0, cost: cost += 0, environment: environment += 0 },
                 nextText: 5
             },
             {
                 text: 'Option 4',
-                setState: { success: success += 0, cost: cost += 0, environment: environment += 0 },
                 nextText: 5
             }
         ]
@@ -147,22 +134,18 @@ const textNodes = [
         options: [
             {
                 text: 'Option 1',
-                setState: { success: success += 0, cost: cost += 0, environment: environment += 0 },
                 nextText: 6
             },
             {
                 text: 'Option 2',
-                setState: { success: success += 0, cost: cost += 0, environment: environment += 0 },
                 nextText: 6
             },
             {
                 text: 'Option 3',
-                setState: { success: success += 0, cost: cost += 0, environment: environment += 0 },
                 nextText: 6
             },
             {
                 text: 'Option 4',
-                setState: { success: success += 0, cost: cost += 0, environment: environment += 0 },
                 nextText: 6
             }
         ]
@@ -173,22 +156,18 @@ const textNodes = [
         options: [
             {
                 text: 'Option 1',
-                setState: { success: success += 0, cost: cost += 0, environment: environment += 0 },
                 nextText: -1
             },
             {
                 text: 'Option 2',
-                setState: { success: success += 0, cost: cost += 0, environment: environment += 0 },
                 nextText: -1
             },
             {
                 text: 'Option 3',
-                setState: { success: success += 0, cost: cost += 0, environment: environment += 0 },
                 nextText: -1
             },
             {
                 text: 'Option 4',
-                setState: { success: success += 0, cost: cost += 0, environment: environment += 0 },
                 nextText: -1
             }
         ]
