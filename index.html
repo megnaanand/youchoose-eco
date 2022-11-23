@@ -2,22 +2,306 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="styles.css" rel="stylesheet">
-    <script defer src="game.js"></script>
-    <title>Text Adventure</title>
+    <title>YouChoose</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="module">
+      import confetti from 'https://cdn.skypack.dev/canvas-confetti';
+      // show confetti when proceed is clicked 7 times
+      let count = 0;
+      const button = document.getElementById('proceed');
+      button.addEventListener('click', () => {
+        count += 1;
+        if (count === 7) {
+          confetti({
+            particleCount: 500,
+            spread: 150,
+            origin: { y: 0.25 }
+          });
+        }
+      });
+      // confetti();
+    </script>
+    
 </head>
 
-<body>
-    <div class="container">
-        <div id="text">Text</div>
-        <div id="option-buttons" class="btn-grid">
-            <button class="btn">Option 1</button>
-            <button class="btn">Option 2</button>
-            <button class="btn">Option 3</button>
-            <button class="btn">Option 4</button>
+
+<body background="./image/background_1.png">
+
+    <div class="script-container">
+      <h2>Team YouChoose</h2>
+      <h3>Build Your Own City!</h3>
+      <!-- <p class="line"> -->
+
+        <div class="scene" id="opening">
+          <p>
+            <b><em>Opening Scene</em></b><br>
+            <br>
+            “Congratulations! The federal government has recently acquired a new piece of land and you have been tasked with building a new town on it. <br>
+            <br>
+            You have a budget of $12 billion to create the best town possible. While planning your town, you must make 6 important decisions that will dictate its future success and impact on the environment. <br>
+            <br>
+            Make wise decisions to put your small town on the map and make it stand the test of time and climate change!” <br>
+            <br>
+          </p>
+        </div>
+
+        <div class="scene" id="first">
+          <p>
+            <b><em>Energy Source</em></b><br>
+            <br>
+            <em>“After clearing the land, you are now ready to begin construction!</em>
+            <br>
+            <br>
+            Your town needs an energy source to keep it running! Select how you want to power your city.” <br>
+            <br>
+            Your total budget left: $ <b>12</b> billion <br>
+          </p>
+        </div>
+
+        <div class="scene" id="second">
+          <p>
+            <b><em>Water Source</em></b><br>
+            <br>
+            “Your town doesn’t have a water source. How will your residents quench their thirst and perform their basic bodily functions?! Select how you would like to source your water.” <br>
+            <br>
+            Your total budget left: $ <b><span id="budget"></span></b> billion <br>
+          </p>
+        </div>
+
+        <div class="scene" id="third">
+          <p>
+            <b><em>Food Source</em></b><br>
+            <br>
+            “Now that we’ve sourced all this water, all we need is some food to keep your citizens from going hungry. Select how you would like to source your food.” <br>
+            <br>
+            Your total budget left: $ <b><span id="budget"></span></b> billion <br>
+          </p>
+        </div>
+
+        <div class="scene" id="fourth">
+          <p>
+            <b><em>Roads</em></b><br>
+            <br>
+            “Time to connect it all together! How are your residents going to travel from far and wide to your town without any roads? Select what kind of roads you would like to build.” <br>
+            <br>
+            Your total budget left: $ <b><span id="budget"></span></b> billion <br>
+          </p>
+        </div>
+
+        <div class="scene" id="fifth">
+          <p>
+            <b><em>Residential Housing</em></b><br>
+            <br>
+            “Now that you’ve set up the infrastructure of your town, your residents are ready to move in! But they don’t have a place to live. Select the style of the residential homes you’d like to build.” <br>
+            <br>
+            Your total budget left: $ <b><span id="budget"></span></b> billion <br>
+          </p>
+        </div>
+
+        <div class="scene" id="sixth">
+          <p>
+            <b><em>Public Transport Infrastructure</em></b><br>
+            <br>
+            “Your residents would like to be able to get around without a car! Got room in your budget? If you do, select what type of public transportation you want to implement in your city.” <br>
+            <br>
+            Your total budget left: $ <b><span id="budget"></span></b> billion <br>
+          </p>
+        </div>
+
+        <div class="scene" id="end">
+          <p>
+            <b><em>End Scene</em></b><br>
+            <br>
+            “Congratulations on building your city! The number displayed on the side is how well your city scored, both environmentally and productively. <br>
+            <br>
+            A poor score ranges from __ to __, a productive but non-environmentally conscious score ranges from __ to __, and a productive and environmentally friendly score ranges from __ to __.” <br>
+            <br>
+            “How do you think you did? How difficult was it to make some of these choices? What sacrifices did you make and do you regret prioritizing some decisions over others? <br>
+            <br>
+            Do you think your residents are happy? By playing YouChoose, we hope you get the chance to reflect on the hard decisions you had to make and the things one must sacrifice to be environmentally friendly. <br>
+            <br>
+            Although they may be the harder and more costly decision to make, they will ultimately keep us and our earth happy.” <br>
+          </p>
+        </div>
+
+
+      <!-- </p> -->
+    </div>
+
+    <div class="footer">
+      <p>© 2022 by SYN 100 - Team YouChoose</p>
+    </div>
+
+    <!-- href button (deprecated) -->
+    <!-- <a href="#" type="button" class="btn btn-default js-button">New Message</a> -->
+    
+    <!---------------------------------- button for script ---------------------------------->
+
+    <button  
+            id="proceed"
+            class="btn btn-default" 
+            onclick="toggler();">
+            Proceed to next scene!
+    </button>
+
+    <!---------------------------------- button for script ---------------------------------->
+
+
+    <!---------------------------------- button for result ---------------------------------->
+
+    <div class="wrapper">
+      <div class="button" onclick="document.body.classList.add('active')">
+          <span class="button-text">Click here <br> to view your result</span>
+          <div class="button-backgrounds">
+              <div class="button-circle button-circle1"></div>
+              <div class="button-circle button-circle2"></div>
+              <div class="button-circle button-circle3"></div>
+              <div class="button-circle button-circle4"></div>
+          </div>
+      </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="popup">
+            <div class="popup-inside">
+                <div class="backgrounds">
+                    <div class="background"></div>
+                    <div class="background background2"></div>
+                    <div class="background background3"></div>
+                    <div class="background background4"></div>
+                    <div class="background background5"></div>
+                    <div class="background background6"></div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="content-wrapper">
+                    <h1>Your Environmental Score: <p id="env_score"></p> <br><br> Your Productive Score: <p id="suc_score"></p></h1>
+                    <p>Do you like our game?</p>
+                    <p class="try-again" onclick="document.body.classList.remove('active')">Refresh your browser <br> to play again.</p>
+                </div>
+            </div>
         </div>
     </div>
+
+
+
+    <!---------------------------------- button for result ---------------------------------->
+
+
+    <!---------------------------------- button for popup ---------------------------------->
+
+    <!-- Trigger/Open The Modal -->
+    <button id="myBtn">Make your decision!</button>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="question">
+          <div id="text">Text</div>
+          <div id="option-buttons" class="btn-grid">
+            <button class="btn-opt">Option 1</button>
+            <button class="btn-opt">Option 2</button>
+            <button class="btn-opt">Option 3</button>
+            <button class="btn-opt">Option 4</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!---------------------------------- button for popup ---------------------------------->
+
+
+    <!---------------------------------- button for question (deprecated) ---------------------------------->
+
+    <!-- <div class="question">
+      <div id="text">Text</div>
+      <div id="option-buttons" class="btn-grid">
+        <button class="btn-opt">Option 1</button>
+        <button class="btn-opt">Option 2</button>
+        <button class="btn-opt">Option 3</button>
+        <button class="btn-opt">Option 4</button>
+      </div>
+    </div> -->
+
+    <!----------------------------------- button for question (deprecated) ---------------------------------->
+
+    <!----------------------------------- for images ---------------------------------->
+
+    <!-- version #1 (deprecated) -->
+    <!-- each image in a grid/separate div and overlay-->
+    <!-- <div class="image-grid">
+      <div class="image01"></div>
+      <div class="image02"></div>
+      <div class="image03"></div>
+      <div class="image04"></div>
+      <div class="image05"></div>
+      <div class="image06"></div>
+      <div class="image07"></div>
+      <div class="image08"></div>
+      <div class="image09"></div>
+      <div class="image10"></div>
+      <div class="image11"></div>
+      <div class="image12"></div>
+      <div class="image13"></div>
+    </div> -->
+
+    <!-- version #2 -->
+    <!-- one big image and overlay -->
+    <div class="image-container"> 
+
+      <div class="basics">
+        <img class="img1" id="img1" src="./image/farmland.png" alt="farmland">
+        <img class="img2" id="img2" src="./image/reservoir.png" alt="reservoir">
+        <img class="img19" id="img19" src="./image/well.png" alt="well">
+        <!-- <img class="img20" id="img20" src="./image/outsource.png" alt="outsource"> -->
+        <img class="img21" id="img21" src="./image/food truck.png" alt="food truck">
+
+      </div>
+
+      <div class="houses">
+        <img class="img3" id="img3" src="./image/colorful homes.png" alt="home">
+        <img class="img4" id="img4" src="./image/apt.png" alt="apt">
+      </div>
+
+      <div class="energy sources">
+        <img class="img5" id="img5" src="./image/energy sources/fossil fuel.png" alt="fossil">
+        <img class="img6" id="img6" src="./image/energy sources/nuclear plant.png" alt="nuclear plant">
+        <img class="img7" id="img7" src="./image/energy sources/solar panels.png" alt="solar panels">
+        <img class="img8" id="img8" src="./image/energy sources/turbine.png" alt="turbine">
+      </div>
+
+      <div class="roads">
+        <img class="img9" id="img9" src="./image/unpaved roads.png" alt="unpaved_roads">
+        <img class="img10" id="img10" src="./image/paved roads.png" alt="paved_roads">
+      </div>
+
+      <div class="forest">
+        <img class="img11" id="img11" src="./image/forest/bot clear.png" alt="bot_clear_forest">
+        <img class="img12" id="img12" src="./image/forest/bot mid clear.png" alt="bot_mid_clear_forest">
+        <img class="img13" id="img13" src="./image/forest/bot top clear.png" alt="bot_top_clear_forest">
+        <img class="img14" id="img14" src="./image/forest/full forest.png" alt="full_forest">
+        <img class="img15" id="img15" src="./image/forest/left clear.png" alt="left_clear">
+      </div>
+
+      <div class="transportation">
+        <img class="img16" id="img16" src="./image/transportation/train stop.png" alt="train stop">
+        <img class="img17" id="img17" src="./image/transportation/bus stop.png" alt="bus stop">
+        <img class="img18" id="img18" src="./image/transportation/subway.png" alt="subway">
+      </div>
+
+    </div>
+    
+
+    <script src="game.js"></script>
+    <noscript>You need to enable JavaScript to view the full site.</noscript>
+
 </body>
+
 </html>

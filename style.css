@@ -1,0 +1,706 @@
+/* ------------------------- for the script ------------------------- */
+body {
+    font-family: monospace;
+    font-size: 15px;
+}
+
+/* p {
+  display: none;
+}
+
+.toggled p {
+  display: block;
+} */
+
+
+p.line {
+    font-size: 1.1em;
+    line-height: 1.5em;
+}
+
+.script-container {
+  height: 100%;
+  width: 28%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(46, 166, 25, 0.182);
+  overflow-x: hidden;
+}
+
+.btn {
+  display: block;
+  margin-left: 57%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  font-family: monospace;
+}
+
+/* ------------------------- for the script ------------------------- */
+
+/* ------------------------- for the questions ------------------------- */
+
+/* .question {
+  width: 800px;
+  max-width: 80%;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 2 px;
+  bottom: 7%;
+  position: fixed;
+  z-index: 2;
+} */
+
+.btn-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10 px;
+  margin-top: 20 px;
+}
+
+.btn-opt {
+  background-color: hsl(200, 100%, 50%);
+  border: 1 px solid hsl(200, 100% 30%);
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: white;
+  outline: none;
+  font-family: monospace;
+}
+
+.btn-opt:hover {
+  border-color: black;
+}
+/* ------------------------- for the questions ------------------------- */
+
+/* ------------------------- for the images ------------------------- */
+
+.image-container {
+  top:15%;
+  left:30%;
+  right:5%;
+  bottom:25%;
+  float: right;
+  position: fixed !important;
+  position: absolute;
+}
+
+/* farmland */
+.img1 {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: contain;
+  visibility: hidden;
+}
+
+/* reservoir */
+.img2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: contain;
+  visibility: hidden;
+}
+
+/* colorful homes */
+.img3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: contain;
+  visibility: hidden;
+}
+
+/* apt */
+.img4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: contain;
+  visibility: hidden;
+}
+
+/* fossil fuel */
+.img5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: contain;
+  visibility: hidden;
+}
+
+/* nuclear plant */
+.img6 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: contain;
+  visibility: hidden;
+}
+
+/* solar panels */
+.img7 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: contain;
+  visibility: hidden;
+}
+
+/* turbine */
+.img8 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: contain;
+  visibility: hidden;
+}
+
+/* unpaved roads */
+.img9 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: contain;
+  visibility: hidden;
+}
+
+/* paved roads */
+.img10 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: contain;
+  visibility: hidden;
+}
+
+/* bot clear */
+.img11 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: contain;
+  visibility: hidden;
+}
+
+/* bot mid clear */
+.img12 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: contain;
+  visibility: hidden;
+}
+
+/* bot top clear */
+.img13 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: contain;
+  visibility: hidden;
+}
+
+/* full forest */
+.img14 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: contain;
+  visibility: visible;
+}
+
+/* left clear */
+.img15 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: contain;
+  visibility: hidden;
+}
+
+/* train stop */
+.img16 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: contain;
+  visibility: hidden;
+}
+
+/* bus stop */
+.img17 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: contain;
+  visibility: hidden;
+}
+
+/* subway */
+.img18 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: contain;
+  visibility: hidden;
+}
+
+/* well */
+.img19 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: contain;
+  visibility: hidden;
+}
+
+/* outsource */
+.img20 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: contain;
+  visibility: hidden;
+}
+
+/* food truck */
+.img21 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: contain;
+  visibility: hidden;
+}
+
+/* version #1 (deprecated) */
+/* .image-grid div {
+  width: 25%;
+  height: 250px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image01 { background-image: url('./image/block.png'); opacity: 0.5;}
+.image02 { background-image: url('./image/block.png'); opacity: 0.5;}
+.image03 { background-image: url('./image/block.png'); opacity: 0.5;}
+.image04 { background-image: url('./image/farm.png'); opacity: 0.5;}
+.image05 { background-image: url('./image/block.png'); opacity: 0.5;}
+.image06 { background-image: url('./image/block.png'); opacity: 0.5;}
+.image07 { background-image: url('./image/block.png'); opacity: 0.5;}
+.image08 { background-image: url('./image/reservoir.png'); opacity: 0.5;}
+.image09 { background-image: url('./image/block.png'); opacity: 0.5;}
+.image10 { background-image: url('./image/block.png'); opacity: 0.5;}
+.image11 { background-image: url('./image/block.png'); opacity: 0.5;}
+.image12 { background-image: url('./image/energy_source.png'); opacity: 0.5;} */
+
+/* .image13 { background-image: url('./image/background_2.png'); opacity: 1.0;} */
+
+/* @media screen and (max-width: 400px) {
+  .image-grid {
+    flex-direction: column;
+    flex-wrap: no-wrap;
+  }
+  .image-grid div { width: 100%; }
+} */
+
+
+/* ------------------------- for the images ------------------------- */
+
+/* ------------------------- for the modal ------------------------- */
+#myBtn {
+  display: block;
+  bottom: 30%;
+  z-index: 1;
+  position: fixed;
+  font-family: monospace;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* ------------------------- for the modal ------------------------- */
+
+/* ------------------------- for the footer ------------------------- */
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  /* height: 8%; */
+  background-color: rgba(46, 166, 25, 0.182);
+  color: rgb(11, 1, 1);
+  text-align: center;
+}
+
+/* ------------------------- for the footer ------------------------- */
+
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+:root, button{
+    font-family: 'Raleway', serif;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.color{
+    background: linear-gradient(to right, #e1e0ff, #d7fadd);
+}
+
+
+h1{
+    padding-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 16px;
+}
+
+p{
+    padding-bottom: 15px;
+}
+
+p:last-of-type{
+    padding-bottom: 0;
+}
+
+.try-again{
+    cursor: pointer;
+    position: relative;
+    font-size: 16px;
+}
+
+.try-again:after{
+    content: '';
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    height: 1px;
+    top: 100%;
+    background: #ebebeb;
+    margin-top: 8px;
+    transition: all 0.3s ease;
+}
+
+.try-again:hover:after{
+    left: 40%;
+    right: 40%;
+}
+
+.wrapper{
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    margin-left: 37%;
+    margin-top: 11%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button{
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    -webkit-appearance: none;
+    background: whitesmoke;
+    outline: none;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border-radius: 2px;
+    transition: all 0.5s ease;
+    font-weight: 600;
+    font-size: 14px;
+    height: 60px;
+    width: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: 8px;
+    box-shadow: 0 0 0 white, 0 0 0 white;
+    text-align: center;
+}
+
+.button-text{
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(to right, #950cbf, #3208b9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* .button-circle{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #504bff, 0 0 20px #504bff, 0 0 30px #504bff;
+    transition: all 0.5s ease;
+}
+
+.button-circle2{
+    top: auto;
+    bottom: 0;
+}
+
+.button-circle3{
+    left: auto;
+    right: 0;
+    box-shadow: 0 0 10px #4cfa63, 0 0 20px #4cfa63, 0 0 30px #4cfa63;
+}
+
+.button-circle4{
+    left: auto;
+    top: auto;
+    bottom: 0;
+    right: 0;
+    box-shadow: 0 0 10px #4cfa63, 0 0 20px #4cfa63, 0 0 30px #4cfa63;
+} */
+
+.button:hover{
+    box-shadow: -15px 0 70px -15px #504bff, 15px 0 70px -15px #4cfa63;
+}
+
+/* .button:hover .button-circle1{
+    transform: translate(-15px, -15px) scale(0);
+}
+
+.button:hover .button-circle2{
+    transform: translate(-15px, 15px) scale(0);
+}
+
+.button:hover .button-circle3{
+    transform: translate(15px, -15px) scale(0);
+}
+
+.button:hover .button-circle4{
+    transform: translate(15px, 15px) scale(0);
+}
+
+.button:hover .button-circle{
+    box-shadow: none;
+} */
+
+.popup{
+    opacity: 0;
+    visibility: hidden;
+    height: 400px;
+    width: 400px;
+    flex-shrink: 0;
+    border-radius: 3px;
+    position: relative;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease
+}
+
+.popup-inside{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 0 0 black;
+    transition:
+            box-shadow 0.5s ease 0.7s,
+            border-radius 0.35s ease 0.7s;
+}
+
+.backgrounds{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.background{
+    --offset: 0;
+    position: absolute;
+    left: var(--offset);
+    right: var(--offset);
+    bottom: var(--offset);
+    top: var(--offset);
+    background: linear-gradient(to right, #504bff, #4cfa63);
+    transform: scale(0);
+    transition: all 0.5s ease 0s;
+    border-radius: 50%;
+}
+
+.background2{
+    --offset: 10%;
+    position: absolute;
+    left: var(--offset);
+    right: var(--offset);
+    bottom: var(--offset);
+    top: var(--offset);
+    background: linear-gradient(to right, #6665ff, #69fa7f);
+    transform: scale(0);
+    transition: all 0.5s ease 0.1s;
+}
+
+.background3{
+    --offset: 20%;
+    position: absolute;
+    left: var(--offset);
+    right: var(--offset);
+    bottom: var(--offset);
+    top: var(--offset);
+    background: linear-gradient(to right, #8583ff, #85fa99);
+    z-index: 2;
+    transition: all 0.5s ease 0.2s;
+}
+
+.background4{
+    --offset: 30%;
+    position: absolute;
+    left: var(--offset);
+    right: var(--offset);
+    bottom: var(--offset);
+    top: var(--offset);
+    background: linear-gradient(to right, #aaaaff, #a7fab7);
+    z-index: 3;
+    transition: all 0.5s ease 0.3s;
+}
+
+.background5{
+    --offset: 40%;
+    position: absolute;
+    left: var(--offset);
+    right: var(--offset);
+    bottom: var(--offset);
+    top: var(--offset);
+    background: linear-gradient(to right, #c9c8ff, #c3fad1);
+    z-index: 4;
+    transition: all 0.5s ease 0.4s;
+}
+
+.background6{
+    --offset: 40%;
+    position: absolute;
+    left: var(--offset);
+    right: var(--offset);
+    bottom: var(--offset);
+    top: var(--offset);
+    background: white;
+    z-index: 5;
+    transition: all 0.8s ease 0.4s;
+}
+
+.content{
+    --offset: 0;
+    position: absolute;
+    left: var(--offset);
+    right: var(--offset);
+    bottom: var(--offset);
+    top: var(--offset);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.35s ease 0.75s;
+    z-index: 10;
+}
+
+.content-wrapper{
+    text-align: center;
+}
+
+body.active .content{
+    opacity: 1;
+    transform: none;
+}
+
+body.active .popup{
+    opacity: 1;
+    visibility: visible;
+}
+
+body.active .popup-inside{
+    border-radius: 0;
+    box-shadow: -50px 0 200px -50px #504bff, 50px 0 200px -50px #4cfa63;
+}
+
+body.active .background{
+    transform: scale(1);
+}
+
+body.active .background6{
+    transform: scale(8);
+}
