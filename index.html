@@ -57,8 +57,6 @@
             <br>
             Your town needs an energy source to keep it running! Select how you want to power your city.” <br>
             <br>
-            Your total budget left: $ <b>12</b> billion <br>
-          </p>
         </div>
 
         <div class="scene" id="second">
@@ -67,7 +65,6 @@
             <br>
             “Your town doesn’t have a water source. How will your residents quench their thirst and perform their basic bodily functions?! Select how you would like to source your water.” <br>
             <br>
-            Your total budget left: $ <b><span id="budget"></span></b> billion <br>
           </p>
         </div>
 
@@ -77,7 +74,6 @@
             <br>
             “Now that we’ve sourced all this water, all we need is some food to keep your citizens from going hungry. Select how you would like to source your food.” <br>
             <br>
-            Your total budget left: $ <b><span id="budget"></span></b> billion <br>
           </p>
         </div>
 
@@ -87,7 +83,6 @@
             <br>
             “Time to connect it all together! How are your residents going to travel from far and wide to your town without any roads? Select what kind of roads you would like to build.” <br>
             <br>
-            Your total budget left: $ <b><span id="budget"></span></b> billion <br>
           </p>
         </div>
 
@@ -97,7 +92,6 @@
             <br>
             “Now that you’ve set up the infrastructure of your town, your residents are ready to move in! But they don’t have a place to live. Select the style of the residential homes you’d like to build.” <br>
             <br>
-            Your total budget left: $ <b><span id="budget"></span></b> billion <br>
           </p>
         </div>
 
@@ -107,7 +101,6 @@
             <br>
             “Your residents would like to be able to get around without a car! Got room in your budget? If you do, select what type of public transportation you want to implement in your city.” <br>
             <br>
-            Your total budget left: $ <b><span id="budget"></span></b> billion <br>
           </p>
         </div>
 
@@ -115,15 +108,22 @@
           <p>
             <b><em>End Scene</em></b><br>
             <br>
-            “Congratulations on building your city! The number displayed on the side is how well your city scored, both environmentally and productively. <br>
+            Your total budget left: $ <b><span id="budget"></span></b> billion <br>
+            Your environment score: <b><span id="env_score"></span></b> <br>
+            Your success score: <b><span id="suc_score"></span></b> <br>
             <br>
-            A poor score ranges from __ to __, a productive but non-environmentally conscious score ranges from __ to __, and a productive and environmentally friendly score ranges from __ to __.” <br>
+            Congratulations on building your city! The number displayed is how well your city scored, both environmentally and productively. <br>
             <br>
-            “How do you think you did? How difficult was it to make some of these choices? What sacrifices did you make and do you regret prioritizing some decisions over others? <br>
+            Scores can be positive or negative, but the higher your score is, the more successful and environmentally friendly your city is!
+            <br>
+            How do you think you did? How difficult was it to make some of these choices? What sacrifices did you make and do you regret prioritizing some decisions over others? <br>
             <br>
             Do you think your residents are happy? By playing YouChoose, we hope you get the chance to reflect on the hard decisions you had to make and the things one must sacrifice to be environmentally friendly. <br>
             <br>
-            Although they may be the harder and more costly decision to make, they will ultimately keep us and our earth happy.” <br>
+            Although they may be the harder and more costly decision to make, they will ultimately keep us and our earth happy. <br>
+            <br>
+            Refresh the browser to play again!
+            <br>
           </p>
         </div>
 
@@ -152,39 +152,6 @@
 
     <!---------------------------------- button for result ---------------------------------->
 
-    <div class="wrapper">
-      <div class="button" onclick="document.body.classList.add('active')">
-          <span class="button-text">Click here <br> to view your result</span>
-          <div class="button-backgrounds">
-              <div class="button-circle button-circle1"></div>
-              <div class="button-circle button-circle2"></div>
-              <div class="button-circle button-circle3"></div>
-              <div class="button-circle button-circle4"></div>
-          </div>
-      </div>
-    </div>
-
-    <div class="wrapper">
-        <div class="popup">
-            <div class="popup-inside">
-                <div class="backgrounds">
-                    <div class="background"></div>
-                    <div class="background background2"></div>
-                    <div class="background background3"></div>
-                    <div class="background background4"></div>
-                    <div class="background background5"></div>
-                    <div class="background background6"></div>
-                </div>
-            </div>
-            <div class="content">
-                <div class="content-wrapper">
-                    <h1>Your Environmental Score: <p id="env_score"></p> <br><br> Your Productive Score: <p id="suc_score"></p></h1>
-                    <p>Do you like our game?</p>
-                    <p class="try-again" onclick="document.body.classList.remove('active')">Refresh your browser <br> to play again.</p>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
 
@@ -212,7 +179,6 @@
           </div>
         </div>
       </div>
-
     </div>
 
     <!---------------------------------- button for popup ---------------------------------->
